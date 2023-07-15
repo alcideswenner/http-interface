@@ -23,7 +23,6 @@ public class TodoController {
 
     @GetMapping(value = "/{id}")
     public ResponseEntity<Todo> findById(@PathVariable Integer id) {
-        System.out.println("testando tag git");
         return ResponseEntity.ok(todoClient.findById(id));
     }
 
