@@ -3,6 +3,7 @@ package com.alcideswenner.httpinterface.controller;
 import java.util.List;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import com.alcideswenner.httpinterface.annotations.RegisterLog;
 import com.alcideswenner.httpinterface.dto.Todo;
 import com.alcideswenner.httpinterface.service.TodoClient;
 import lombok.RequiredArgsConstructor;
@@ -10,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 @RestController
 @RequestMapping(value = "/todos")
 @RequiredArgsConstructor
+@RegisterLog
 public class TodoController {
 
     private final TodoClient todoClient;
